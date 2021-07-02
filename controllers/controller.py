@@ -10,7 +10,7 @@ def index():
 @app.route("/<player_1_choice>")
 def first_choice(player_1_choice):
     player_1 = Player("Player 1", player_1_choice)
-    return render_template("player_choices.html")
+    return render_template("player_choices.html", player_1=player_1)
 
 @app.route("/<player_1_choice>/<player_2_choice>")
 def second_choice(player_1_choice, player_2_choice):

@@ -1,9 +1,12 @@
 <h2>Play the game</h2>
 
 <main>
+    <p>{{player_1.name}} chooses: {{player_1.choice}}</p>
+
     <ul>
-        <li><a href="rock">ROCK</a></li>
-        <li><a href="paper">PAPER</a></li>
-        <li><a href="scissors">SCISSORS</a></li>
+        <li><a href="{{player_1.choice}}/rock">ROCK</a></li>
+        <li><a href="{{player_1.choice}}/paper">PAPER</a></li>
+        <li><a href="{{player_1.choice}}/scissors">SCISSORS</a></li>
     </ul>
+
 </main>
