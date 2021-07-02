@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>WHO IS WINNER?!!?</h2>
+
+<main>
+    <p>
+        WINNER is: {{result.name}}
+    </p>
+    <p>
+        {{player_1.name}} choosed: {{player_1.choice}}
+    </p>
+    <p>
+        {{player_2.name}} choosed: {{player_2.choice}}
+    </p>
+</main>
+
+{% endblock %}
