@@ -2,6 +2,10 @@
 
 {% block content %}
 
-<p>{{wins}}</p>
+
+{% for win in wins %}
+<p>{{win}}</p>
+{% endfor %}
+
 
 {% endblock %}
