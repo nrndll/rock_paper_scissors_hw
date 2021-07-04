@@ -6,24 +6,47 @@
 }
 
 .player_choices h2 {
-    border: solid black;
     margin: 4vh;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
 }
 
 .player_choices marquee {
+    margin-top: 1vh;
+    padding: 2vh;
     border: solid black;
 }
 
 .player_choices ul {
     list-style: none;
-    border: solid black;
-    margin: 4vh;
+    margin-top: 1vh;
+    margin-bottom: 4vh;
     padding: 4vh;
     display: flex;
-    /* justify-content: space-evenly; */
+    /* justify-content: space-between; */
 }
 
 .player_choices ul li a {
     text-decoration: none;
+    padding: 2vh;
+    margin: 2vh;
     border: solid black;
+    color: black;
+}
+
+.player_choices ul li a:hover {
+    background-color: coral;
+}
+
+.player_choices ul li a:visited {
+    color: black;
+}
+
+#show_player_choices_results {
+    width: 80%;
+    margin: auto;
+    padding: 4vh;
+    margin-left: 3vh;
+    font-size: 3vh;
 }

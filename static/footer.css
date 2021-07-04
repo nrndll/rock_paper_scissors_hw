@@ -1,0 +1,9 @@
+.footer_container {
+    border: solid black;
+    display: flex;
+    justify-content: center;
+    /* flex-shrink: 0; */
+    /* flex: 1; */
+    margin-top: 100%;
+    margin-bottom: 0vh;
+}

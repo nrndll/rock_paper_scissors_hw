@@ -1,0 +1,43 @@
+/* #welcome {
+    display: flex;
+    flex-direction: column;
+} */
+
+#welcome h2 {
+    margin: 4vh;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+#rules {
+    display: flex;
+    flex-direction: column;
+}
+
+#rules h4 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1vh;
+}
+
+#rules ol {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#welcome article {
+    display: flex;
+    flex-direction: column;
+}
+
+#welcome article h4 {
+    margin: auto;
+    margin-bottom: 1vh;
+    padding: 5vh 5vh 1vh 5vh;
+}
+
+#welcome article p {
+    width: 80%;
+    margin: auto;
+}

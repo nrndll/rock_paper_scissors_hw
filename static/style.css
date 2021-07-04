@@ -2,56 +2,32 @@ body {
     font-family: fantasy, sans-serif;
     margin: 0%;
     width: auto;
+    /* display: flex; */
+    /* flex: 1 0 auto; */
 }
 
-.header_container {
-    /* font-family: fantasy, sans-serif; */
-    /* display: grid;
-    grid-template-columns: 3fr 3fr 3fr;
-    grid-template-rows: auto;
-    grid-template-areas: "header header nav"; */
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-}
-
-.header_container h1 {
-    border: solid black;
-    flex-grow: 2;
-    margin: 2vh;
-    padding: 1vh 3vh;
+#play_computer h2 {
+    margin: 4vh;
     display: flex;
     justify-content: center;
-    font-size: 6vh;
-    /* grid-area: header; */
+    text-decoration: underline;
 }
 
-.header_container > nav > ul {
-    list-style: none;
+#play_computer form label {
+    margin-right: 2vh;
+}
+
+#player_name_entry {
     display: flex;
-    margin: 2vh
-        /* grid-area: nav; */
+    justify-content: center;
+    margin-bottom: 4vh;
 }
 
-/* .header_container > nav > ul > li {
-    margin: 2vh;
-} */
-
-.header_container > nav > ul > li > a {
-    text-decoration: none;
-    margin: 2vh;
-    padding: 2vh 3vh;
-    border: solid black;
-}
-
-/* .header_container > nav > ul > li > a:visited {
-    text-decoration: none;
-} */
-
-
-.footer_container {
-    border: solid black;
+#player_choice_entry {
     display: flex;
     justify-content: center;
 }
 
+#player_choice_entry input {
+    margin-left: 2vh;
+}

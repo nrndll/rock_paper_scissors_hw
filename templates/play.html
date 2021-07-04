@@ -3,20 +3,22 @@
 {% block content %}
 
 <section id="play_computer">
-    <h2>Try against Computer!</h2>
-
+    <h2>Against Computer!</h2>
     <form action="/play" method="POST">
-    <label for="player_name">you enter name here:</label>
-    <input type="text" name="player_name" id="player_name">
-
-    <label for="player_choose">You must choose here:</label>
-    <select name="player_choose" id="player_choose">
-        <option value="">select</option>
-        <option value="rock">ROCK</option>
-        <option value="paper">PAPER</option>
-        <option value="scissors">SCISSORS</option>
-    </select>
-    <input type="submit" value="Enter">
+        <div id="player_name_entry">
+            <label for="player_name">you enter name here:</label>
+            <input type="text" name="player_name" id="player_name">
+        </div>
+        <div id="player_choice_entry">
+            <label for="player_choose">You must choose here:</label>
+            <select name="player_choose" id="player_choose">
+                <option value="">select</option>
+                <option value="rock">ROCK</option>
+                <option value="paper">PAPER</option>
+                <option value="scissors">SCISSORS</option>
+            </select>
+            <input type="submit" value="Enter">
+        </div>
     </form>
 </section>
 

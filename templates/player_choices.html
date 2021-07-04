@@ -1,12 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
 <section class="player_choices">
     <main>
-        <h2>Play the game</h2>
-        <p>{{player_1.name}} chooses: {{player_1.choice}}</p>
-        <marquee>PLAYER 2 CHOOSE YOUR WEAPON</marquee>
+        <h2>PLAYER 2</h2>
+        <!-- <p>{{player_1.name}} chooses: {{player_1.choice}}</p> -->
+        <marquee>CHOOSE YOUR WEAPON</marquee>
         <ul>
             <li><a href="{{player_1.choice}}/rock">ROCK</a></li>
             <li><a href="{{player_1.choice}}/paper">PAPER</a></li>
             <li><a href="{{player_1.choice}}/scissors">SCISSORS</a></li>
         </ul>
+        <marquee>BATTLE COMMENCE!</marquee>
     </main>
 </section>
+
+{% endblock %}

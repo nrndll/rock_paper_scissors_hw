@@ -2,16 +2,17 @@
 
 {% block content %}
 <section class="player_choices">
-    <h2>WHO IS WINNER?!!?</h2>
-
     <main>
+        <h2>WHO IS WINNER?!!?</h2>
         {% if result == None %}
-        <marquee>Winner is: NOBODY!</marquee>
+        <marquee><strong>NOBODY!</strong></marquee>
         {% else %}
-        <marquee>WINNER is: <strong>{{result.name}}</strong></marquee>
+        <marquee><strong>{{result.name.upper()}} is WINNER!</strong></marquee>
         {% endif %}
-        <p>{{player_1.name}} choosed: {{player_1.choice}}</p>
-        <p>{{player_2.name}} choosed: {{player_2.choice}}</p>
+        <div id="show_player_choices_results">
+            <p>{{player_1.name}} choose: <strong>{{player_1.choice.upper()}}</strong></p>
+            <p>{{player_2.name}} choose: <strong>{{player_2.choice.upper()}}</strong></p>
+        </div>
     </main>
 </section>
 
