@@ -41,3 +41,7 @@
     width: 80%;
     margin: auto;
 }
+
+#welcome article p strong {
+    text-decoration: underline;
+}
