@@ -1,7 +1,7 @@
 from flask import render_template, request
 from app import app
 from models.player import Player
-from models.game import *
+from models.game import Game
 
 @app.route("/")
 def index():
@@ -20,10 +20,13 @@ def challenger_entry():
     challenger_name = request.form["player_name"]
     challenger_choice = request.form["player_choose"]
     challenger = Player(challenger_name, challenger_choice)
-    computer = computer_player()
-    result = judication(challenger, computer)
-    win_tracker(result)
-    return render_template("result.html", result=result, player_1=challenger, player_2=computer)
+    game = Game(challenger, None)
+    # computer = game.computer_player()
+    # game.player_2 = computer
+    game.computer_player()
+    result = game.judication()
+    # win_tracker(result)
+    return render_template("result.html", result=result, player_1=challenger, player_2=game.player_2)
 
 @app.route("/<player_1_choice>")
 def first_choice(player_1_choice):
@@ -34,10 +37,12 @@ def first_choice(player_1_choice):
 def second_choice(player_1_choice, player_2_choice):
     player_1 = Player("Player 1", player_1_choice)
     player_2 = Player("Player 2", player_2_choice)
-    result = judication(player_1, player_2)
-    win_tracker(result)
-    return render_template("result.html", result=result, player_1=player_1, player_2=player_2, wins=wins)
+    game = Game(player_1, player_2)
+    result = game.judication()
+    # game.win_tracker(result)
+    return render_template("result.html", result=result, player_1=player_1, player_2=player_2) 
+    # wins=game.wins)
 
-@app.route("/game_history")
-def game_history():
-    return render_template("game_history.html", wins=wins)            
+# @app.route("/game_history")
+# def game_history():
+#     return render_template("game_history.html", wins=wins)            

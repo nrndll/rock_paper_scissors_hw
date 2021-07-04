@@ -1,41 +1,45 @@
 from models.player import Player
 from random import Random
 
-# class Game():
+class Game():
 
-#      def __init__(self, player_1, player_2):
-#         self.player_1=player_1
-#         self.player_2=player_2 
-#         self.wins=[]
+    def __init__(self, player_1, player_2):
+        self.player_1=player_1
+        self.player_2=player_2 
+        # self.wins=[]
 
-wins=[]
+# wins=[]
 
-def judication(player_1, player_2):
-    if player_1.choice == player_2.choice:
-        return None
-    elif player_1.choice == "rock" and player_2.choice == "paper":
-        return player_2
-    elif player_1.choice == "rock" and player_2.choice == "scissors":
-        return player_1
-    elif player_1.choice == "paper" and player_2.choice == "scissors":
-        return player_2
-    elif player_1.choice == "paper" and player_2.choice == "rock":
-        return player_1
-    elif player_1.choice == "scissors" and player_2.choice == "rock":
-        return player_2
-    elif player_1.choice == "scissors" and player_2.choice == "paper":
-        return player_1
-    else: 
-        return None
+    def judication(self):
+        if self.player_1.choice == self.player_2.choice:
+            return None
+        elif self.player_1.choice == "rock" and self.player_2.choice == "paper":
+            return self.player_2
+        elif self.player_1.choice == "rock" and self.player_2.choice == "scissors":
+            return self.player_1
+        elif self.player_1.choice == "paper" and self.player_2.choice == "scissors":
+            return self.player_2
+        elif self.player_1.choice == "paper" and self.player_2.choice == "rock":
+            return self.player_1
+        elif self.player_1.choice == "scissors" and self.player_2.choice == "rock":
+            return self.player_2
+        elif self.player_1.choice == "scissors" and self.player_2.choice == "paper":
+            return self.player_1
+        else: 
+            return None
 
 
-def computer_player():
-    choices = ["rock", "paper", "scissors"]
-    name = "Computer"
-    return Player(name, Random().choice(choices))
+    def computer_player(self):
+        choices = ["rock", "paper", "scissors"]
+        name = "Computer"
+        # return Player(name, Random().choice(choices))
+        self.player_2 = Player(name, Random().choice(choices))
+        return
 
-def win_tracker(player):
-    if player == None:
-        wins.append("Draw")
-    else:
-        wins.append(player.name)
+
+
+    # def win_tracker(self, player):
+    #     if player == None:
+    #         self.wins.append("Draw")
+    #     else:
+    #         self.wins.append(player.name)
