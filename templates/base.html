@@ -4,26 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DARK SCISSORS</title>
+    <title>DRAK SCISSORS</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
 </head>
+
+<header class="header_container">
+    <h1>D@RK 5CI550RZ!</h1>
+    <nav>    
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/welcome">Rules</a>
+            </li>
+            <li>
+                <a href="/play">vs Computer</a>
+            </li>
+            <li>
+                <a href="/game_history">Win Histories</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 <body>
-    <h1>D@RK 5CI550RZ!?!</h1>
-    <ul>
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li>
-            <a href="/welcome">Rules</a>
-        </li>
-        <li>
-            <a href="/play">vs Computer</a>
-        </li>
-        <li>
-            <a href="/game_history">Win Histories</a>
-        </li>
-    </ul>
     {% block content %}
 
     {% endblock %}
 </body>
+<footer class="footer_container">
+    <p>This is copyrighted webiste DARK SCISSORS 2021</p>
+</footer>
 </html>

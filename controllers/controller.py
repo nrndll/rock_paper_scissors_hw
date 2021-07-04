@@ -7,7 +7,6 @@ from models.game import *
 def index():
     return render_template("index.html")
 
-
 @app.route("/welcome")
 def welcome():
     return render_template("welcome.html")

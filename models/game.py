@@ -3,9 +3,10 @@ from random import Random
 
 # class Game():
 
-#     def __init__(self):
-#         self.player_1_win_count = 0
-#         self.player_2_win_count = 0
+#      def __init__(self, player_1, player_2):
+#         self.player_1=player_1
+#         self.player_2=player_2 
+#         self.wins=[]
 
 wins=[]
 
@@ -24,6 +25,9 @@ def judication(player_1, player_2):
         return player_2
     elif player_1.choice == "scissors" and player_2.choice == "paper":
         return player_1
+    else: 
+        return None
+
 
 def computer_player():
     choices = ["rock", "paper", "scissors"]
